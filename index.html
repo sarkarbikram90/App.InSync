@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App.InSync</title>
+         
+    <div id="header">
+        <img src="SyncUp.jpg">
+    </div>
+</head>
+<body>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+    <div id="button">
+        <input type="onclick" id="click" placeholder="Create Group">
+        <button onclick="Create()">Create</button>
+    </div>
+    
+    <div id="sidebar">
+        <!-- Channels/Groups will be dynamically added here -->
+    </div>
+    <div id="main">
+        <!-- Chat messages will be displayed here -->
+    </div>
+    <div id="messageBox">
+        <input type="text" id="messageInput" placeholder="Type your message here">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+    <div id="profile">
+        <input type="file" id="profilePic" accept="image/png, image/jpeg">
+        <select id="status">
+            <option value="available">Available</option>
+            <option value="busy">Busy</option>
+            <option value="in-call">In a Call</option>
+            <option value="bridge-call">In a Bridge Call</option>
+            <option value="offline">Offline</option>
+            <option value="away">Away</option>
+            <option value="on-break">On Break</option>
+        </select>
+    </div>
+</body>
+</html>
