@@ -4,20 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>App.InSync</title>
-         
-    <div id="header">
-        <img src="SyncUp.jpg">
-    </div>
-</head>
-<body>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+</head>
+<body>
+    <div id="header">
+        <h2>InSync</h2>
+    </div>
 
     <div id="button">
-        <input type="onclick" id="click" placeholder="Create Group">
+        <input type="onclick" id="click" placeholder="Create a Group Chat">
+    </div>
+    <div id="createGroup">
         <button onclick="Create()">Create</button>
     </div>
-    
+    <div id="Call">
+        <button onclick="Call()">Call</button>
+    </div>
+
     <div id="sidebar">
         <!-- Channels/Groups will be dynamically added here -->
     </div>
@@ -29,15 +33,16 @@
         <button onclick="sendMessage()">Send</button>
     </div>
     <div id="profile">
-        <input type="file" id="profilePic" accept="image/png, image/jpeg">
-        <select id="status">
+        <input type="file" id="profilePic" accept="image/jpeg">
+        <button onclick="uploadProfilePic()">Upload</button>
+    </div>
+    <div id="status">
+        <select>
             <option value="available">Available</option>
             <option value="busy">Busy</option>
             <option value="in-call">In a Call</option>
-            <option value="bridge-call">In a Bridge Call</option>
             <option value="offline">Offline</option>
             <option value="away">Away</option>
-            <option value="on-break">On Break</option>
         </select>
     </div>
 </body>

@@ -1,0 +1,122 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set a lighter black background and white font */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Lighter black */
+    color: #fff;
+}
+
+/* Style the header */
+#header {
+    text-align: left;
+    padding: 20px 0;
+}
+
+/* Style the heading */
+#header h1 {
+    margin: 0;
+}
+
+/* Style the button container */
+#button,
+#createGroup,
+#Call {
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Style the input field for creating a channel/group */
+#click {
+    padding: 10px;
+    width: 200px;
+    color: #000; /* Change input text color */
+    background-color: #fff; /* White background */
+}
+
+/* Style the create and call buttons */
+#createGroup button,
+#Call button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Style the sidebar */
+#sidebar {
+    float: left;
+    width: 20%;
+    padding: 20px;
+    background-color: #1f1f1f; /* Dark grey */
+}
+
+/* Style the main chat area */
+#main {
+    float: left;
+    width: 60%;
+    padding: 20px;
+    background-color: #272727; /* Darker grey */
+}
+
+/* Style the message box */
+#messageBox {
+    clear: both;
+    padding: 100px;
+    margin-bottom: 10px;
+    background-color: #1f1f1f; /* Dark grey */
+    
+}
+
+/* Style the input field for typing messages */
+#messageInput {
+    width: calc(100% - 80px);
+    padding: 30px;
+    margin-bottom: 10px;
+    color: #000; /* Change input text color */
+    background-color: #000; /* White background */
+    
+}
+
+/* Style the send button */
+#messageBox button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-align: bottom;
+}
+
+/* Style the profile section */
+#profile {
+    float: right;
+    width: 20%;
+    padding: 20px;
+    background-color: #1f1f1f; /* Dark grey */
+}
+
+/* Style the profile picture input */
+#profilePic {
+    display: block;
+    margin-bottom: 10px;
+    text-align: top;
+}
+
+/* Style the status dropdown */
+#status {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: #000; /* Change dropdown text color */
+    background-color: #fff; /* White background */
+    text-align: top;
+}
