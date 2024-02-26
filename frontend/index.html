@@ -12,14 +12,13 @@
         <h2>InSync</h2>
     </div>
 
-    <div id="button">
-        <input type="onclick" id="click" placeholder="Create a Group Chat">
-    </div>
-    <div id="createGroup">
-        <button onclick="Create()">Create</button>
-    </div>
+        
     <div id="Call">
-        <button onclick="Call()">Call</button>
+        <button onclick="toggleCallOptions()">Call</button>
+        <select name="button" id="CallButton" onchange="callType()" hidden>
+            <option value="audio">Audio</option>
+            <option value="video">Video</option>
+        </select>
     </div>
 
     <div id="sidebar">
@@ -32,18 +31,7 @@
         <input type="text" id="messageInput" placeholder="Type your message here">
         <button onclick="sendMessage()">Send</button>
     </div>
-    <div id="profile">
-        <input type="file" id="profilePic" accept="image/jpeg">
-        <button onclick="uploadProfilePic()">Upload</button>
-    </div>
-    <div id="status">
-        <select>
-            <option value="available">Available</option>
-            <option value="busy">Busy</option>
-            <option value="in-call">In a Call</option>
-            <option value="offline">Offline</option>
-            <option value="away">Away</option>
-        </select>
-    </div>
+    
+    
 </body>
 </html>

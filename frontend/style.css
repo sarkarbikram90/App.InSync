@@ -8,51 +8,72 @@
 /* Set a lighter black background and white font */
 body {
     font-family: Arial, sans-serif;
-    background-color: #121212; /* Lighter black */
-    color: #fff;
+    background-color: #221e1e; /* Lighter black */
+    color: #c4baba;
 }
 
 /* Style the header */
 #header {
     text-align: left;
-    padding: 20px 0;
+    padding: 10px 5px;
+    background-color: #1f1f1f; /* Dark grey */
+    color: #fff;
+    font-size: 15px;
 }
 
 /* Style the heading */
-#header h1 {
-    margin: 0;
+#header  {
+    margin: 10px 5px;
+    padding: 10;
+    font-size: 15px;
 }
 
-/* Style the button container */
-#button,
-#createGroup,
+/* Style the Call container */
 #Call {
-    text-align: center;
-    padding: 20px 0;
+    position: left;
+    display: inline-block;
 }
 
-/* Style the input field for creating a channel/group */
-#click {
-    padding: 10px;
-    width: 200px;
-    color: #000; /* Change input text color */
-    background-color: #fff; /* White background */
-}
-
-/* Style the create and call buttons */
-#createGroup button,
+/* Style the call button */
 #Call button {
+    text-align: right;
     padding: 10px 20px;
     cursor: pointer;
     background-color: #007bff;
     color: #fff;
-    border: none;
+    border: 5px solid #007bff;
     border-radius: 5px;
+}
+
+/* Style the CallButton dropdown */
+#CallButton {
+    position: absolute;
+    top: calc(100% + 5px);
+    right: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    margin: 0;
+    z-index: 9999;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: none;
+}
+
+/* Style the options in the dropdown */
+#CallButton option {
+    padding: 10px 20px;
+}
+
+/* Style the dropdown when it's open */
+#CallButton.open {
+    display: block;
 }
 
 /* Style the sidebar */
 #sidebar {
-    float: left;
+    float: right;
     width: 20%;
     padding: 20px;
     background-color: #1f1f1f; /* Dark grey */
@@ -63,60 +84,46 @@ body {
     float: left;
     width: 60%;
     padding: 20px;
-    background-color: #272727; /* Darker grey */
+    background-color: #221e1e; /* Darker grey */
 }
 
 /* Style the message box */
 #messageBox {
-    clear: both;
-    padding: 100px;
-    margin-bottom: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 10px;
+    display: block;
+    width: 100%;
+    padding: 20px; /* Adjust padding as needed */
     background-color: #1f1f1f; /* Dark grey */
-    
+    color: #fff; /* Text color */
+    z-index: 9999; /* Ensure it's on top of other elements */
 }
+
 
 /* Style the input field for typing messages */
 #messageInput {
     width: calc(100% - 80px);
     padding: 30px;
     margin-bottom: 10px;
-    color: #000; /* Change input text color */
+    color: #c5b5b5; /* Change input text color */
     background-color: #000; /* White background */
     
 }
 
 /* Style the send button */
 #messageBox button {
-    padding: 10px 20px;
+    padding: 30px 20px;
     cursor: pointer;
     background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 5px;
-    text-align: bottom;
+    text-align: bottom; 
 }
 
-/* Style the profile section */
-#profile {
-    float: right;
-    width: 20%;
-    padding: 20px;
-    background-color: #1f1f1f; /* Dark grey */
-}
 
-/* Style the profile picture input */
-#profilePic {
-    display: block;
-    margin-bottom: 10px;
-    text-align: top;
-}
 
-/* Style the status dropdown */
-#status {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    color: #000; /* Change dropdown text color */
-    background-color: #fff; /* White background */
-    text-align: top;
-}
+
+
+
