@@ -19,31 +19,20 @@ function sendMessage() {
 
 // Function to handle making a call
 function makeCall() {
-    // Your call logic goes here
+    // Display a message indicating the call is being made
     console.log('Making a call...');
+
+    // Your call logic goes here
 }
 
 // Event listeners
-messageButton.addEventListener('click', sendMessage);
-callButton.addEventListener('click', makeCall);
-
-// Function to toggle the display of call options dropdown
-function toggleCallOptions() {
-    const callButton = document.getElementById('CallButton');
-    callButton.style.display = callButton.style.display === 'none' ? 'inline-block' : 'none';
-}
-
-// Function to handle making a call
-function makeCall() {
-    const callOption = document.getElementById('CallButton').value;
-    if (callOption === 'audio') {
-        // Handle audio call logic
-        console.log('Making an audio call...');
-    } else if (callOption === 'video') {
-        // Handle video call logic
-        console.log('Making a video call...');
+messageInput.addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+        sendMessage();
     }
-}
+});
+
+messageButton.addEventListener('click', sendMessage);
 
 // Event listener for the call button
 callButton.addEventListener('click', makeCall);

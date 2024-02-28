@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>App.InSync</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    
 </head>
 <body>
     <div id="header">
@@ -14,11 +14,8 @@
 
         
     <div id="Call">
-        <button onclick="toggleCallOptions()">Call</button>
-        <select name="button" id="CallButton" onchange="callType()" hidden>
-            <option value="audio">Audio</option>
-            <option value="video">Video</option>
-        </select>
+        <button onclick= "A.call()">Audio Call</button>
+        <button onclick= "A.call()">Video Call</button>
     </div>
 
     <div id="sidebar">
@@ -32,6 +29,9 @@
         <button onclick="sendMessage()">Send</button>
     </div>
     
-    
+    <div id="footer">
+        <h6>Copyright (c) 2024 Bikram Sarkar</h6>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

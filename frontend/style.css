@@ -28,15 +28,18 @@ body {
     font-size: 15px;
 }
 
+
 /* Style the Call container */
 #Call {
-    position: left;
-    display: inline-block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
 }
 
-/* Style the call button */
+/* Style the call buttons */
 #Call button {
-    text-align: right;
+    display: block;
+    margin-bottom: 10px; /* Add margin between the buttons if needed */
     padding: 10px 20px;
     cursor: pointer;
     background-color: #007bff;
@@ -45,38 +48,18 @@ body {
     border-radius: 5px;
 }
 
-/* Style the CallButton dropdown */
-#CallButton {
-    position: absolute;
-    top: calc(100% + 5px);
-    right: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px 20px;
-    margin: 0;
-    z-index: 9999;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    display: none;
+/* Apply styles to the second button */
+#Call button:last-child {
+    margin-bottom: 0; /* Remove margin for the last button */
 }
 
-/* Style the options in the dropdown */
-#CallButton option {
-    padding: 10px 20px;
-}
-
-/* Style the dropdown when it's open */
-#CallButton.open {
-    display: block;
-}
 
 /* Style the sidebar */
 #sidebar {
     float: right;
     width: 20%;
     padding: 20px;
-    background-color: #1f1f1f; /* Dark grey */
+    background-color: #221e1e; /* Dark grey */
 }
 
 /* Style the main chat area */
@@ -90,7 +73,7 @@ body {
 /* Style the message box */
 #messageBox {
     position: fixed;
-    bottom: 0;
+    bottom: 10px;
     left: 10px;
     display: block;
     width: 100%;
@@ -120,6 +103,15 @@ body {
     border: none;
     border-radius: 5px;
     text-align: bottom; 
+}
+
+/* Style the footer */
+#footer {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
 }
 
 
