@@ -6,11 +6,10 @@
   <p align="center">
     InSync is a Video Conference App Similar to Google Meet
     <br />
-    <a href="https://github.com/ckalgos/google-meet-clone"><strong>Explore the docs »</strong></a>
-    <br />
+        <br />
     <br />  
     
-    <br />
+    
   </p>
 </p>
 
