@@ -1,3 +1,4 @@
+import React from 'react';
 import MainScreen from "./components/MainScreen/MainScreen.component";
 import firepadRef, { db, userName } from "./server/firebase";
 import "./App.css";
@@ -20,7 +21,8 @@ function App(props) {
 
     return localStream;
   };
-  useEffect(async () => {
+  
+  useEffect(async() => {
     const stream = await getUserStream();
     stream.getVideoTracks()[0].enabled = false;
     props.setMainStream(stream);

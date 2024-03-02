@@ -6,15 +6,20 @@ import {
   faDesktop,
   faVideoSlash,
   faMicrophoneSlash,
+  faEnvelopeOpenText,
 } from "@fortawesome/free-solid-svg-icons";
 import ReactTooltip from "react-tooltip";
 import "./MeetingFooter.css";
+
 const MeetingFooter = (props) => {
   const [streamState, setStreamState] = useState({
     mic: true,
     video: false,
     screen: false,
+    text: true
   });
+  const [message, setMessage] = useState(""); // State for message input
+
   const micClick = () => {
     setStreamState((currentState) => {
       return {
@@ -45,12 +50,11 @@ const MeetingFooter = (props) => {
       };
     });
   };
-  useEffect(() => {
-    props.onMicClick(streamState.mic);
-  }, [streamState.mic]);
-  useEffect(() => {
-    props.onVideoClick(streamState.video);
-  }, [streamState.video]);
+
+  const handleMessageChange = (event) => {
+    setMessage(event.target.value);
+  };
+
   return (
     <div className="meeting-footer">
       <div
@@ -77,6 +81,14 @@ const MeetingFooter = (props) => {
         disabled={streamState.screen}
       >
         <FontAwesomeIcon icon={faDesktop} />
+      </div>
+      {}
+      <div className="message-input">
+          onClick={() => props.onMessage(message)}       
+          value={message}
+          onChange={handleMessageChange}
+        
+        <FontAwesomeIcon icon={faEnvelopeOpenText} />
       </div>
       <ReactTooltip />
     </div>

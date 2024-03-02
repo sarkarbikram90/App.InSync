@@ -83,6 +83,7 @@ const MainScreen = (props) => {
           onScreenClick={onScreenClick}
           onMicClick={onMicClick}
           onVideoClick={onVideoClick}
+          onTextClick={onTextClick}
         />
       </div>
     </div>

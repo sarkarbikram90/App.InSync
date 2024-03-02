@@ -1,8 +1,8 @@
 import firebase from "firebase";
 
 var firebaseConfig = {
-  apiKey: "", // Add API Key
-  databaseURL:"" // Add databaseURL
+  apiKey: "AIzaSyBlnkP0V1EYa06DwpuzTQIEUjimalP9vdo", // Add API Key
+  databaseURL:"orbital-highway-354106.appspot.com" // Add databaseURL
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
