@@ -14,6 +14,7 @@ const MainScreen = (props) => {
       props.updateUser({ audio: micEnabled });
     }
   };
+  
   const onVideoClick = (videoEnabled) => {
     if (props.stream) {
       props.stream.getVideoTracks()[0].enabled = videoEnabled;
@@ -72,6 +73,7 @@ const MainScreen = (props) => {
 
     props.updateUser({ screen: true });
   };
+
   return (
     <div className="wrapper">
       <div className="main-screen">
@@ -83,7 +85,7 @@ const MainScreen = (props) => {
           onScreenClick={onScreenClick}
           onMicClick={onMicClick}
           onVideoClick={onVideoClick}
-          onTextClick={onTextClick}
+          onTextClick={() => {}}
         />
       </div>
     </div>
