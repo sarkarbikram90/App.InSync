@@ -35,4 +35,6 @@ messageInput.addEventListener('keypress', function(event) {
 messageButton.addEventListener('click', sendMessage);
 
 // Event listener for the call button
-callButton.addEventListener('click', makeCall);
+Call.A.Call.forEach(button => {
+    button.addEventListener('click', makeCall);
+});
