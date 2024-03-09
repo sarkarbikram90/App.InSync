@@ -37,7 +37,7 @@ body {
 }
 
 /* Style the call buttons */
-#Call button {
+#callButton {
     display: block;
     margin-bottom: 10px; /* Add margin between the buttons if needed */
     padding: 10px 20px;
@@ -46,11 +46,6 @@ body {
     color: #fff;
     border: 5px solid #007bff;
     border-radius: 5px;
-}
-
-/* Apply styles to the second button */
-#Call button:last-child {
-    margin-bottom: 0; /* Remove margin for the last button */
 }
 
 

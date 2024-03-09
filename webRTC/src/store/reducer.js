@@ -9,7 +9,7 @@ import {
 
 import {
   createOffer,
-  initializeListensers,
+  initializeListeners,
   updatePreference,
 } from "../server/peerConnection";
 
@@ -66,7 +66,7 @@ export const userReducer = (state = defaultUserState, action) => {
     let participants = { ...state.participants };
     const userId = Object.keys(payload.currentUser)[0];
     payload.currentUser[userId].avatarColor = generateColor();
-    initializeListensers(userId);
+    initializeListeners(userId);
     state = { ...state, currentUser: { ...payload.currentUser }, participants };
     return state;
   } else if (action.type === REMOVE_PARTICIPANT) {

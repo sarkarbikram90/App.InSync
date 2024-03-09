@@ -18,7 +18,7 @@ const MeetingFooter = (props) => {
     screen: false,
   });
   const [message, setMessage] = useState("");
-  const [text, setText] = useState(true);
+  const [text, setText] = useState(true); // Used state variable
 
   const micClick = () => {
     setStreamState((currentState) => ({
@@ -47,6 +47,7 @@ const MeetingFooter = (props) => {
 
   const handleMessageChange = (event) => {
     setMessage(event.target.value);
+    setText(event.target.value !== ''); // Using 'text' state variable
   };
 
   return (
@@ -72,10 +73,9 @@ const MeetingFooter = (props) => {
           />
         </div>
         <div
-          className="meeting-icons"
-          data-tip="Share Screen"
+          className={"meeting-icons " + (streamState.screen ? "disabled" : "")}
+          data-tip={streamState.screen ? "Screen Sharing Enabled" : "Share Screen"}
           onClick={onScreenClick}
-          disabled={streamState.screen}
         >
           <FontAwesomeIcon icon={faDesktop} />
         </div>
